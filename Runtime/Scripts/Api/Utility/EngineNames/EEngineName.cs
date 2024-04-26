@@ -17,9 +17,9 @@ namespace OpenAi.Api
         text_davinci_003,
         text_davinci_002,
         code_davinci_002,
-        // GPT-4 in beta
-        BETA_gpt_4,
-        BETA_gpt_4_32k,
+        // GPT-4
+        gpt_4_turbo,
+        gpt_4,
     }
 
     public static class UTEEngineName
@@ -50,10 +50,10 @@ namespace OpenAi.Api
                     return UTModelNames.text_davinci_002;
                 case EEngineName.code_davinci_002:
                     return UTModelNames.code_davinci_002;
-                case EEngineName.BETA_gpt_4:
-                    return UTModelNames.BETA_gpt_4;
-                case EEngineName.BETA_gpt_4_32k:
-                    return UTModelNames.BETA_gpt_4_32k;
+                case EEngineName.gpt_4_turbo:
+                    return UTModelNames.gpt_4_turbo;
+                case EEngineName.gpt_4:
+                    return UTModelNames.gpt_4;
             }
 
             throw new ArgumentException($"Invalid enum value provided when getting model name. Value provided: {name}");
