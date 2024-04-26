@@ -17,8 +17,8 @@
         public const string text_davinci_002= "text-davinci-002";
         public const string code_davinci_002 = "code-davinci-002";
 
-        // GPT-4 in beta
-        public const string BETA_gpt_4 = "gpt-4";
-        public const string BETA_gpt_4_32k = "gpt-4-32k";
+        // GPT-4
+        public const string gpt_4_turbo = "gpt-4-turbo";
+        public const string gpt_4 = "gpt-4";
     }
 }
