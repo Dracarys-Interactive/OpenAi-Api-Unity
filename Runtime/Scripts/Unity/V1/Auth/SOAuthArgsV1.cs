@@ -40,10 +40,10 @@ namespace OpenAi.Unity.V1
         /// <returns></returns>
         public SAuthArgsV1 ResolveAuth()
         {
-            switch (AuthType) 
+            switch (AuthType)
             {
                 case EAuthProvisionMethod.LocalFile: return ResolveLocalFileAuthArgs();
-                case EAuthProvisionMethod.String: return new SAuthArgsV1() { private_api_key = PrivateApiKey, organization = Organization };
+                case EAuthProvisionMethod.String: return new SAuthArgsV1() { private_api_key = string.IsNullOrEmpty(PrivateApiKey) ? Environment.GetEnvironmentVariable("OPENAI_API_KEY") : PrivateApiKey, organization = Organization };
             }
 
             throw new Exception("Failed to resolve AuthArgs");
