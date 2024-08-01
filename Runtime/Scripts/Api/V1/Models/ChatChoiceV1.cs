@@ -71,7 +71,10 @@ namespace OpenAi.Api.V1
                         finish_reason = jo.StringValue;
                         break;
                     default:
-                        Debug.LogWarning("ChatChoiceV1: missing field " + jo.Name);
+                        if (Application.isEditor)
+                        {
+                            Debug.LogWarning("ChatChoiceV1: missing field " + jo.Name);
+                        }
                         break;
                 }
             }
