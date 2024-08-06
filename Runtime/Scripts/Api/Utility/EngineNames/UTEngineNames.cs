@@ -21,5 +21,6 @@
         public const string gpt_4_turbo = "gpt-4-turbo";
         public const string gpt_4 = "gpt-4";
         public const string gpt_4o = "gpt-4o";
+        public const string gpt_4o_mini = "gpt-4o-mini";
     }
 }

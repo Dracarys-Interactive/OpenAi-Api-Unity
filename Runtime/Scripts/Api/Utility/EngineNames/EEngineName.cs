@@ -20,7 +20,8 @@ namespace OpenAi.Api
         // GPT-4
         gpt_4_turbo,
         gpt_4,
-        gpt_4o
+        gpt_4o,
+        gpt_4o_mini
     }
 
     public static class UTEEngineName
@@ -57,6 +58,8 @@ namespace OpenAi.Api
                     return UTModelNames.gpt_4;
                 case EEngineName.gpt_4o:
                     return UTModelNames.gpt_4o;
+                case EEngineName.gpt_4o_mini:
+                    return UTModelNames.gpt_4o_mini;
             }
 
             throw new ArgumentException($"Invalid enum value provided when getting model name. Value provided: {name}");
