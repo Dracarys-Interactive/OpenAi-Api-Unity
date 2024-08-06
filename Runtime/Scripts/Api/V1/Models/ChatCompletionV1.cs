@@ -94,7 +94,10 @@ namespace OpenAi.Api.V1
                         usage.FromJson(jo);
                         break;
                     default:
-                        Debug.LogWarning("ChatCompletionV1: missing field " + jo.Name);
+                        if (Application.isEditor)
+                        {
+                            Debug.LogWarning("ChatCompletionV1: missing field " + jo.Name);
+                        }
                         break;
                 }
             }
